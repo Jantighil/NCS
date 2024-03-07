@@ -127,7 +127,7 @@
 	<title>URLClassifier!</title>
     <link rel="stylesheet" href="https://embed.pickaxeproject.com/axe/scripts/inline-button/styles.css">
 	<!-- <link rel="stylesheet" href="../static/assets/bootstrap/css/index.css"> -->
-	<link rel="icon" type="image/png" sizes="1000x999" href="../static/assets/img/CLASSIFIER.png">
+	<link rel="icon" type="image/png" sizes="1000x999" href="./img/ThePhish_logo.png">
 	<!-- <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courier+Prime">
@@ -184,10 +184,10 @@ body{
 			<div class="container d-flex flex-column p-0">
 				<hr class="sidebar-divider my-0">
 				<ul class="navbar-nav text-light" id="accordionSidebar">
-					<li class="nav-item"><a class="nav-link active" href="/" style="max-width: 114px;" target="_blank" rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="../static/assets/img/logo_rounded.png" style="margin-top: 0px;margin-left: 0px;"></a></li>
-					<li class="nav-item"><a class="nav-link" href="../PASSWORD/docs/index.html" style="max-width: 114px;" target="_blank" rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="../static/assets/img/thehive.png" style="margin-right: 0px;margin-left: 0px;"></a></li>
-					<li class="nav-item"><a class="nav-link" href="../how/how.html" style="max-width: 114px;" target="_blank" rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="../static/assets/img/cortex.png" style="transform: translate(0px);"></a></li>
-					<li class="nav-item"><a class="nav-link" href="../h.html" style="max-width: 114px;" target="_blank" rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="../static/assets/img/misp.png" style="transform: translate(0px);"></a></li>
+					<li class="nav-item"><a class="nav-link active" href="/" style="max-width: 114px;"  rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="./img/logo_rounded.png" id="goBackLink" style="margin-top: 0px;margin-left: 0px;"></a></li>
+					<li class="nav-item"><a class="nav-link" href="../PASSWORD/docs/index.html" id="goBackLink" style="max-width: 114px;"  rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="./img/thehive.png" style="margin-right: 0px;margin-left: 0px;"></a></li>
+					<li class="nav-item"><a class="nav-link" href="./how/how.html" id="goBackLink" style="max-width: 114px;"  rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="./img/cortex.png" style="transform: translate(0px);"></a></li>
+					<li class="nav-item"><a class="nav-link" href="h.html" id="goBackLink" style="max-width: 114px;" rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="./img/misp.png" style="transform: translate(0px);"></a></li>
                     <div id="pickaxe-inline-action-btn"data-formid="Teacher_Bot_MSQF0" data-frame-source="https://embed.pickaxeproject.com/axe?id=Teacher_Bot_MSQF0&mode=embed_gold&host=beta&theme=light&opacity=100&font_header=Real+Head+Pro&size_header=30&font_body=Real+Head+Pro&size_body=16&font_labels=Real+Head+Pro&size_labels=14&font_button=Real+Head+Pro&size_button=16&c_fb=FFFFFF&c_ff=FFFFFF&c_fbd=888888&c_bb=228DD7&c_bt=FFFFFF&c_t=000000&s_ffo=100&s_bbo=100&s_f=minimalist&s_b=filled&s_t=2&s_r=2" data-title="Teacher Bot" data-btn-color="228DD7" data-btn-style="filled" data-border-radius="2" data-border-width="2" data-font-color="FFFFFF"></div>
 				</ul>
 				<div class="text-center d-none d-md-inline"></div>
@@ -195,7 +195,7 @@ body{
 		</nav>
 		<div class="d-flex flex-column" id="content-wrapper">
 			<div id="content">
-				<div class="container-fluid col-xxl-7 col-xl-7 col-lg-8 col-md-9"><img class="img-fluid" src="../static/assets/img/ThePhish_logo.png" style="margin-bottom: 10px;margin-top: 10px;"></div>
+				<div class="container-fluid col-xxl-7 col-xl-7 col-lg-8 col-md-9"><img class="img-fluid" src="./img/ThePhish_logo.png" style="margin-bottom: 10px;margin-top: 10px;"></div>
 				<div class="container-fluid">
 					<div class="card shadow">
 						<div class="card-header py-3" id="cardHeader" style="background: rgb(248, 249, 252);"><button class="btn btn-primary border rounded disabled col-12" id="listMailsBtn" type="button" style="background: rgb(40,106,149);font-size: 20px;" onclick="list_emails()">List emails</button><div id="progressBar" class="progress d-none" style="height: 44px;font-size:20px">
@@ -210,7 +210,7 @@ body{
 <h1>Welcome to URL Classifier!</h1> 
 <video autoplay muted loop>
 	<!-- Provide multiple video formats for better browser compatibility -->
-	<source src="/static/assets/img/me.mp4" type="video/mp4">
+	<source src="./img/me.mp4" type="video/mp4">
 
 	Your browser does not support the video tag.
 </video>
@@ -263,6 +263,11 @@ body{
 	</div>
     <script src="https://embed.pickaxeproject.com/axe/scripts/inline-button/bundle.js"></script>
     <script>
+           document.getElementById('goBackLink').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevents the default behavior of the link
+      history.back();
+    });
+
         const typo = new Typo('en_US');
         function checkSpelling(url) {
         const words = url.split(/\b/).filter(word => /\w/.test(word));
