@@ -14,13 +14,14 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+            overflow: auto;
         }
 
         .content {
             text-align: center;
             background-color: #5fb4cb;
             width: 100%;
-            height: 50%;
+            height: 30%;
             z-index: 1;
             border-radius: 2%;
 			align-items: center;
@@ -28,7 +29,7 @@
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 4em;
             margin-bottom: 20px;
             color: #03332e;
         }
@@ -50,7 +51,7 @@
             padding: 10px;
             margin-bottom: 20px;
             font-size: 1.4em;
-            border: 1px solid #9b9999;
+            border: 1px solid #03332e;
             border-radius: 5px;
             box-sizing: border-box;
         }
@@ -118,7 +119,33 @@
             width: auto;
             height: auto;
             z-index: -1; 
-        }
+        }/* Add these styles to your existing stylesheet or in a new style tag */
+footer {
+    padding: 20px 0; /* Adjust padding as needed */
+    color: b;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+}
+
+.container {
+    max-width: 1200px; /* Adjust max-width as needed */
+    color: #d6faed;
+}
+
+.copyright {
+    color: #03332e; /* Adjust text color as needed */
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    z-index: 1000; /* Adjust z-index as needed */
+    background-color: #d7e8fc; /* Set the background color to match your design */
+}
+
+
     </style>
 
 <head>
@@ -184,8 +211,8 @@ body{
 			<div class="container d-flex flex-column p-0">
 				<hr class="sidebar-divider my-0">
 				<ul class="navbar-nav text-light" id="accordionSidebar">
-					<li class="nav-item"><a class="nav-link active" href="/" style="max-width: 114px;"  rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="./img/logo_rounded.png" id="goBackLink" style="margin-top: 0px;margin-left: 0px;"></a></li>
-					<li class="nav-item"><a class="nav-link" href="../PASSWORD/docs/index.html" id="goBackLink" style="max-width: 114px;"  rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="./img/thehive.png" style="margin-right: 0px;margin-left: 0px;"></a></li>
+					<li class="nav-item"><a class="nav-link active" href="https://nsc-two.my.canva.site/my-slides" style="max-width: 114px;"  rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="./img/logo_rounded.png" id="goBackLink" style="margin-top: 0px;margin-left: 0px;"></a></li>
+					<li class="nav-item"><a class="nav-link" href="./password/docs/index.html" id="goBackLink" style="max-width: 114px;"  rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="./img/thehive.png" style="margin-right: 0px;margin-left: 0px;"></a></li>
 					<li class="nav-item"><a class="nav-link" href="./how/how.html" id="goBackLink" style="max-width: 114px;"  rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="./img/cortex.png" style="transform: translate(0px);"></a></li>
 					<li class="nav-item"><a class="nav-link" href="h.html" id="goBackLink" style="max-width: 114px;" rel="noopener noreferrer"><img class="img-fluid" data-bss-hover-animate="bounce" src="./img/misp.png" style="transform: translate(0px);"></a></li>
                     <div id="pickaxe-inline-action-btn"data-formid="Teacher_Bot_MSQF0" data-frame-source="https://embed.pickaxeproject.com/axe?id=Teacher_Bot_MSQF0&mode=embed_gold&host=beta&theme=light&opacity=100&font_header=Real+Head+Pro&size_header=30&font_body=Real+Head+Pro&size_body=16&font_labels=Real+Head+Pro&size_labels=14&font_button=Real+Head+Pro&size_button=16&c_fb=FFFFFF&c_ff=FFFFFF&c_fbd=888888&c_bb=228DD7&c_bt=FFFFFF&c_t=000000&s_ffo=100&s_bbo=100&s_f=minimalist&s_b=filled&s_t=2&s_r=2" data-title="Teacher Bot" data-btn-color="228DD7" data-btn-style="filled" data-border-radius="2" data-border-width="2" data-font-color="FFFFFF"></div>
@@ -207,7 +234,7 @@ body{
 									<p class="m-0" style="font-family: 'Share Tech Mono', monospace;"></p>
 								</div>
 							</div><div id=descDiv>
-<h1>Welcome to URL Classifier!</h1> 
+<h1 style="font-size: 20px">Welcome to URL Classifier!</h1> 
 <video autoplay muted loop>
 	<!-- Provide multiple video formats for better browser compatibility -->
 	<source src="./img/me.mp4" type="video/mp4">
@@ -220,6 +247,7 @@ body{
     <form class="content">
         <label for="url">Enter URL:</label>
         <input type="text" id="url" required>
+        <div class="g-recaptcha" data-sitekey="6LfweY8pAAAAAAyTcEgdK4Rw2d_W-69IWbO3l4Nb "></div>
         <button type="button" onclick="classifyUrl()">Classify</button>
     </form>
 
@@ -255,8 +283,9 @@ body{
 				</div>
 			</div>
 			<footer class="bg-white sticky-footer">
-				<div class="container my-auto">
+				<div class="container my-auto" style="height: 20px;">
 					<div class="text-center my-auto copyright"><span></span></div>
+                    <span style="color: #03332e; padding-left: 40%; font-size: 12px;">&copy;  <b>2024 Classifier. All rights reserved.</b> </span>
 				</div>
 			</footer>
 		</div>
@@ -791,6 +820,28 @@ function analyze_email(thisBtn){
 	xhr.send("sid=" + socket.id + "&mailUID=" + uid_field);
 }  
     </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(event) {
+            event.preventDefault(); // Prevent the form from submitting immediately
+    
+            // Use the grecaptcha object to get the user's response
+            var response = grecaptcha.getResponse();
+    
+            // Check if the response is empty (user didn't solve the captcha)
+            if (response.length === 0) {
+                alert("Please complete the reCAPTCHA challenge.");
+                return false;
+            }
+    
+            // Continue with your existing classification logic
+            classifyUrl();
+    
+            return true;
+        }
+    </script>
+    
+
     
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
 	<script src="../static/assets/bootstrap/js/bootstrap.min.js"></script>
