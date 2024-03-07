@@ -50,13 +50,13 @@
             width: 50%;
             padding: 10px;
             margin-bottom: 20px;
-            font-size: 1.4em;
+            font-size: 1.2em;
             border: 1px solid #03332e;
             border-radius: 5px;
             box-sizing: border-box;
         }
         input:hover{
-            color: #6bd9ce;
+            color: #09221f;
         }
 
         button {
@@ -64,6 +64,8 @@
             color: #fff;
             border: none;
             padding: 10px 20px;
+            border-radius: 5px;
+            box-sizing: border-box;
             font-size: 1.3em;
             cursor: pointer;
             border-radius: 5px;
@@ -78,7 +80,7 @@
             margin-top: 20px;
             padding: 20px;
             display: none;
-            background-color: #c1baba;
+            background-color: #c0fcf6;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
         }
@@ -88,7 +90,7 @@
             width: 50px;
             height: 50px;
             border: 5px solid transparent;
-            border-top-color: #009688;
+            border-top-color: #7ef7eb;
             border-radius: 50%;
             animation: spin 1s linear infinite, colorChange 3s ease-in-out infinite alternate;
         }
@@ -104,7 +106,7 @@
         }
 
         .legitimate {
-            color: #03332e;
+            color: #39fada;
         }
 
         .phishing {
@@ -244,11 +246,14 @@ body{
 <div class="content">
    
 
-    <form class="content" style="height: 200px;">
-        <label for="url">Enter URL:</label>
-        <input type="text" id="url" required>
-        <div class="g-recaptcha" data-sitekey="6LfweY8pAAAAAAyTcEgdK4Rw2d_W-69IWbO3l4Nb "></div>
-        <button type="button" onclick="classifyUrl()">Classify</button>
+    <form class="content" style="height: 200px; width: 90%;">
+        
+            <input type="text" id="url" placeholder="ENTER URL" style="padding-left: 2%;" required>
+            <div style="height: 10px; justify-content: space-around;"  class="g-recaptcha" data-sitekey="6LfweY8pAAAAAAyTcEgdK4Rw2d_W-69IWbO3l4Nb "></div>
+            <div style="padding-top: 7%;">
+                <button type="button" style="border-radius: 5px; box-sizing: border-box;" onclick="classifyUrl()">Classify</button> 
+            </div>
+             
     </form>
 
 	<div id="result-container" style="display: none;">
